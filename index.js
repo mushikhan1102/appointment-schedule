@@ -83,12 +83,6 @@ app.use((req, res, next) => {
     });
 });
 
-// set up headers
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET');
-//   next();
-// });
 
 // set up routes
 app.use('/schedule', isAuth, schRoutes);
