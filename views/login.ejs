@@ -10,13 +10,16 @@
     <title><%= pageTitle %></title>
   </head>
   <body>
+    <!--ref the nav bar-->
     <header><%- include("../views/includes/nav.ejs") %></header>
     <main>
       <div id="content">
         <div class="form-container">
+          <!--form to get user logged in doesn't use autofill
+          uses Access ID to login - already a unique identifier-->
           <form action="/login" method="post" autocomplete="off">
             <div class="form-control">
-              <label for="orgId">Organization ID</label>
+              <label for="orgId">Access ID</label>
               <input name="orgId" type="text" />
             </div>
             <div class="form-control">
