@@ -38,7 +38,7 @@ body header nav ul button.nav-btn {
 }
 
 body header nav ul .nav-btn:hover {
-  background-color: #f4f7f5;
+  background-color: #8eb4ec;
   color: #00978d;
   border-color: #00978d;
 }
@@ -46,4 +46,5 @@ body header nav ul .nav-btn:hover {
 body main #content {
   margin: 40px 15px;
 }
+
 /*# sourceMappingURL=styles.css.map */
