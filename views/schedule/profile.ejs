@@ -61,12 +61,12 @@
               Saturday<br />
             </div>
             <div class="form-control">
-              <label for="position">Position</label>
+              <label for="project">Project Title</label>
               <input
                 type="text"
-                name="position"
-                id="position"
-                value="<% if (editing) { %><%= profile.position %><% } %>"
+                name="project"
+                id="project"
+                value="<% if (editing) { %><%= profile.project %><% } %>"
               />
             </div>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>" />

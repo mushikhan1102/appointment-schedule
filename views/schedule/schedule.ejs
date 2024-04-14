@@ -31,7 +31,7 @@
                   Phone:
                   <a href="tel:<%= profile.phone %> "><%= profile.phone %></a>
                 </p>
-                <p>Position: <%= profile.position %></p>
+                <p>Project Title: <%= profile.project %></p>
                 <a
                   class="btn"
                   href="/schedule/profile/<%= profile._id %>?edit=true"
@@ -73,16 +73,6 @@
               <input type="tel" name="phone" id="phone" required />
             </div>
             <div class="form-control">
-              <label for="profile">Interviewer</label>
-              <select name="profile" id="profile-select" required>
-                <% for (const profile of profiles) { %>
-                <option value="<%= profile._id %>">
-                  <%= profile.fname %> <%= profile.lname %>
-                </option>
-                <% } %>
-              </select>
-            </div>
-            <div class="form-control">
               <label for="reason">Reason for Visit</label>
               <textarea
                 name="reason"
@@ -98,7 +88,7 @@
               id="_csrf"
               value="<%= csrfToken %>"
             />
-            <button type="submit">Add Appointment</button>
+            <button type="submit">Add to Schedule</button>
           </form>
         </div>
       </div>
