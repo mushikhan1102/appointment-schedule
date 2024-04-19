@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "web app for students to self report attendance",
   "main": "index.js",
+  "type": "module",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
   "author": "Tyler Shellman",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -21,10 +21,11 @@
     "connect-mongodb-session": "^3.1.1",
     "cors": "^2.8.5",
     "csurf": "^1.11.0",
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-session": "^1.17.2",
+    "mongodb": "^6.5.0",
     "mongoose": "^6.2.2"
   }
 }

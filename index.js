@@ -8,7 +8,7 @@ const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 require('dotenv').config();
-
+mongoose.connect("mongodb://localhost:27017/")
 // import necessary files
 const authRoutes = require('./routes/auth-routes');
 const schRoutes = require('./routes/schedule-routes');
