@@ -53,9 +53,24 @@
             autocomplete="off"
           >
             <div class="form-control">
-              <label for="name">Name</label>
+              <label for="name">Project Title</label>
               <input type="text" name="name" id="name-input" required />
             </div>
+
+            <div class="form-control">
+              <label for="ID">Access ID</label>
+              <textarea
+                name="ID"
+                id="reason"
+                cols="30"
+                rows="10"
+                required
+              ></textarea>
+            </div>
+            
+
+
+
             <div class="form-control">
               <label for="day">Day</label>
               <input type="date" name="day" id="" required />
@@ -72,15 +87,16 @@
               <label for="phone">Phone</label>
               <input type="tel" name="phone" id="phone" required />
             </div>
+
             <div class="form-control">
-              <label for="reason">Reason for Visit</label>
-              <textarea
-                name="reason"
-                id="reason"
-                cols="30"
-                rows="10"
-                required
-              ></textarea>
+              <label for="profile">Name</label>
+              <select name="profile" id="profile-select" required>
+                <% for (const profile of profiles) { %>
+                <option value="<%= profile._id %>">
+                  <%= profile.fname %> <%= profile.lname %>
+                </option>
+                <% } %>
+              </select>
             </div>
             <input
               type="hidden"
@@ -88,13 +104,10 @@
               id="_csrf"
               value="<%= csrfToken %>"
             />
-            <button type="submit">Add to Schedule</button>
+            <button type="submit">Add to schedule</button>
           </form>
         </div>
       </div>
     </main>
-    <footer>
-      <button id="change-view">Change View</button>
-    </footer>
   </body>
 </html>

@@ -171,7 +171,7 @@ function generateHtml(appointment, profileId) {
   // reason element
   const reasonElem = document.createElement('p');
   reasonElem.className = 'reason';
-  reasonElem.innerHTML = '<b>Reason: </b>' + appointment.reason;
+  reasonElem.innerHTML = '<b>ID: </b>' + appointment.reason;
 
   // add each column to the section
   sectionElem.appendChild(divOne);
