@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/forms/forms.css" />
     <title><%= pageTitle %></title>
 </head>
+
+
 <body>
     <!--register user w/ details orgID validation not working, rest work-->
     <header><%- include("../views/includes/nav.ejs") %></header>
@@ -20,35 +22,41 @@
                         <label for="name">First Name</label>
                         <input name="name" type="text" />
                     </div>
+
                     <div class="form-control">
                         <label for="Lname">Last Name</label>
                         <input name="Lname" type="text"/>
                     </div>
+
                     <div class="form-control">
                         <label for="orgId">Access ID</label>
                         <input name="orgId" type="text"/>
                     </div>
+
                     <div class="form-control">
                         <label for="email">Email</label>
                         <input name="email" id="email" type="email" />
                     </div>
+
                     <div class="form-control">
                         <label for="password">Password</label>
                         <input name="password" id="password" type="password" />
                     </div>
+
                     <div class="form-control">
                         <label for="confirmPassword">Confirm Password</label>
                         <input name="confirmPassword" id="confirmPassword" type="password"/>
                     </div>
+                    
                     <input type="hidden" name="_csrf" value="<%=csrfToken %>" />
                     <button class="btn" type="submit">Register</button>
                 </form>
             </div>
         </div>
     </main>
-    <footer></footer>
 
     <script>
+        // validate inputs
         function validateForm() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
@@ -74,8 +82,6 @@
                 alert("Passwords do not match");
                 return false;
             }
-
-
             
             // If all validations pass, return true
             return true;

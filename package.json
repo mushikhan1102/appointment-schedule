@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "web app for students to self report attendance",
   "main": "index.js",
-  "type": "module",
   "engines": {
     "node": "16.x"
   },

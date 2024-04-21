@@ -1,4 +1,4 @@
-// import useful libraries and frameworks
+// imports
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -9,13 +9,13 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 require('dotenv').config();
 mongoose.connect("mongodb://localhost:27017/")
-// import necessary files
+// import files
 const authRoutes = require('./routes/auth-routes');
 const schRoutes = require('./routes/schedule-routes');
 const OrgAccount = require('./models/org');
 const isAuth = require('./middleware/is-auth');
 
-// set up the server
+// set up the server keeps reading default, is this preventing me from deploying?
 const MONGODB_URL = process.env.MONGODB_URL || process.env.DB_CONNECTION;
 
 const PORT = process.env.PORT || 5050;
@@ -27,6 +27,7 @@ const options = {
 };
 
 const app = express();
+
 const store = new MongoDBStore({
   uri: MONGODB_URL,
   collection: 'sessions',
@@ -71,7 +72,7 @@ app.use((req, res, next) => {
   }
   OrgAccount.findById(req.session.org._id)
     .then((org) => {
-      // make sure we actually get a user
+      
       if (!org) {
         return next();
       }
@@ -91,7 +92,7 @@ app.use(authRoutes);
 app.get('/', (req, res, next) => {
   res.render('home', {
     pageTitle: 'Home',
-    msg: 'Welcome to the Scheduling App!',
+    msg: 'Welcome to the Scheduling App',
     isAuthenticated: req.session.isLoggedIn,
   });
 });
