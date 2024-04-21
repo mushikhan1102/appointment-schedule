@@ -1,7 +1,7 @@
 {
-  "name": "attendance-app",
+  "name": "schedule-app",
   "version": "1.0.0",
-  "description": "web app for students to self report attendance",
+  "description": "web app for students to schedule",
   "main": "index.js",
   "engines": {
     "node": "16.x"
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "author": "Tyler Shellman",
+  "author": "Muhammad",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.22"
